@@ -1,4 +1,9 @@
 class Thing
+
+  attr_reader :description
+  attr_writer :description
+  attr_writer :name
+
   def initialize( aName, aDescription )
     @name = aName
     @description = aDescription
@@ -6,7 +11,7 @@ class Thing
 
   # get accessor for @name
   def name
-    return @name
+    return @name.capitalize
   end
 
   # set accessor for @name
@@ -26,6 +31,15 @@ class Thing
 
 end
 
+class Treasure < Thing
+  attr_accessor :value
+  
+  def initialize( aName, aDescription )
+    super( aName, aDescription)
+  end
+end
+
+
 t = Thing.new("the thing", "a lovely, glittery wotsit")
 print(t.name)
 print( " is ")
@@ -36,3 +50,8 @@ print("it has now changed its name to ")
 puts(t.name)
 print("I would describe it as ")
 puts(t.description)
+
+t1 = Treasure.new("sword", "a weapon")
+puts "t1 name=#{t1.name}, description=#{t1.description}"
+t1.description << "(now tarnished)" # concatenating!
+puts "t1 name=#{t1.name}, description=#{t1.description}"
