@@ -63,18 +63,24 @@ In the deep bosom of the ocean buried."
 
 puts('--- s.length ---')
 puts(s.length)
+# returns 164
 
 puts('--- s.reverse ---')
 puts(s.reverse)
+# returns the string in reverse order
 
 puts('--- s.upcase ---')
 puts(s.upcase)
+# returns everything in upper case
 
 puts('--- s.capitalize ---')
 puts(s.capitalize)
+# capitalizes the first letter of the string
 
 puts('--- s.swapcase ---')
 puts(s.swapcase)
+# opposite capitalization
 
 puts('--- s.downcase ---')
 puts(s.downcase)
+# returns everything lowercase
