@@ -3,6 +3,11 @@ class Dog
   # class variables require assigned value at creation
   @@num_dogs = 0
 
+  # this is a Class Method
+  def Dog.showInfo
+    puts 'this is a class method. Number of dogs = ' + @@num_dogs.to_s
+  end
+
   def talk
     puts 'Woof! My name is ' + @name + ' and I am 1 of ' + @@num_dogs.to_s
   end
@@ -29,6 +34,7 @@ class GreatPyrenees < Dog
   end
 end
 
+Dog.showInfo
 
 mydog = Dog.new('Bonzo')
 mydog.talk
@@ -38,3 +44,5 @@ yourdog.talk
 pyr = GreatPyrenees.new('Belle', 'woooooo!')
 pyr.talk
 pyr.howl
+
+Dog.showInfo
