@@ -10,3 +10,4 @@ puts('single quotes: #{ob.timesten(5)}')
 
 #below works because it's in double quotes
 puts("double quotes: #{ob.timesten(5)}")
+
